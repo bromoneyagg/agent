@@ -1,0 +1,151 @@
+/*------------------------------------
+  File for your custom SCSS style
+------------------------------------*/
+
+body {
+  background-color: #270838;
+}
+
+.custom-hidden {
+  overflow: hidden;
+}
+
+.custom-background {
+  background-image: url(../custom/main/main-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.custom-text-color {
+  color: #CAB8D6;
+}
+
+.custom-btn {
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.main-conditions {
+  color: #fff;
+  background-color: rgba(164, 59, 187, 0.3);
+  padding: 25px;
+  margin: 20px 0 30px;
+  &__title {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    margin-bottom: 5px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &__list-item {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    position: relative;
+    padding-left: 10px;
+    margin-left:10px;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 3px;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 50%;
+      // margin: 0 5px;
+      position: absolute;
+      top: 11px;
+      left: 0;
+    }
+  }
+}
+
+.custom-main-block {
+  &__right {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: -80px;
+    transform: translateY(-50%);
+    height: inherit;
+    width: auto;
+    &--mobile {
+      justify-content: center;
+      margin: -110px 0 20px;
+      
+    }
+  }
+}
+
+.custom-card {
+  // background: #CAB8D6;
+  background: #35144B !important;
+  box-shadow: none;
+  &__container {
+    // background: rgba(202, 184, 214, .3) !important;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__title {
+    & span {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -3%;
+      line-height: 26px;
+      color: #fff;
+    }
+  }
+  &__text {
+    flex: 1 1 auto;
+    color: #CAB8D6;
+    font-size: 18px;
+    letter-spacing: -3%;
+    line-height: 26px;
+  }
+}
+
+@media(max-width: 600px) {
+  .custom-main-block {
+    &__img {
+      &--mobile {
+        margin: -80px 0 20px;
+        & img {
+          width: -webkit-fill-available;
+        }
+      }
+    }
+  }
+}
+
+// .custom-p2p {
+//   font-family: "Gluten", cursive;
+//   font-optical-sizing: auto;
+//   font-weight: 800;
+//   font-style: normal;
+//   font-variation-settings: "slnt" 0;
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   color: rgba(39, 8, 56, 0.6);
+//   font-size: calc(60px + 40 * (100vw - 320px) / 880);;
+//   height: 100%;
+// }
+
